@@ -1,0 +1,448 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #d4a8f8;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: #6b2b96;
+    width: 100%;
+    height: 80px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    
+}
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+
+    ul li {
+        list-style: none;
+        position: relative;
+        text-align: center;
+    }
+
+    ul li:hover ul.dropdown {
+        display: block;
+    }
+
+    ul.dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    ul.dropdown li {
+        display: block;
+        text-align: center;
+    }
+
+    ul li a {
+        color: #fff;
+        padding: 20px;
+        font-size: 1.1em;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+    }
+
+    ul li:hover ul {
+        display: block;
+    }
+
+
+    ul li ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #682d8f;
+        background: #851485;
+        display: none;
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ul li ul li {
+        display: block;
+        padding: 15px;
+    }
+
+    .brand {
+        font-size: 1.8em;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    section {
+        padding: 100px 50px 50px;
+        box-sizing: border-box;
+    }
+
+    section h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 3em;
+    }
+
+    section h1 span {
+        font-size: 0.8em;
+        color: #0bacff;
+    }
+
+    select p {
+        color: #333;
+        font-size: 1.05em;
+    }
+
+    ul li a:hover {
+        background: #682d8f;
+    }
+
+
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    section{
+        padding: 30px 13% 20px;
+    }
+    
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+        gap: 3.5rem;
+        background-color: #6b2b96;
+        Left: 0;
+        right: 0;
+        bottom: 0;
+        
+        position: relative;
+        margin-top: auto;
+    }
+
+    .detal-info .footer{
+        position: fixed;
+    }
+
+    .cart .footer{
+        position: relative;
+    }
+
+    .detal-info{
+        margin-top: 15%;
+    }
+
+    .footer-content h4{
+        color: #fff;
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+    }
+    .footer-content li{
+        margin-bottom: 16px;
+    }
+    .footer-content, li a{
+        display: block;
+        color: #d6d6d6;
+        font-size: 15px;
+        font-weight: 400;
+        transition: all .40s ease;
+    }
+
+    .footer-content li a:hover{
+        transform: translateY(-3px) translateX(-5px);
+        color: #fff;
+    }
+    .footer-content p{
+        color: #d6d6d6;
+        font-size: 16px;
+        Line-height: 30px;
+        margin: 20px 0;
+    }
+
+    .icons a{
+        display: inline-block;
+        font-size: 22px;
+        color: #d6d6d6;
+        margin-right: 17px;
+        transition: all .40s ease;
+    }
+
+    .icons a:hover{
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    .footer .footer-image img {
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+    }
+
+    @media (max-width: 1690px){
+    section{
+        padding: 55px 5% 40px;
+        }
+    }
+
+    @media (max-width: 1120px){
+        .footer{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+            gap: 2rem;
+        }
+    }
+
+
+
+#cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cart-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.product {
+    display: inline-block; /* Display products in a line */
+    margin-right: 30px; /* Add some space between products */
+    margin-left: 30px; /* Add some space between products */
+    margin-bottom: 30px;
+    border: 2px solid #242b92; /* Додати обведення для кожного продукту */
+    border-radius: 30px;
+    padding: 10px; 
+    min-height: 300px;
+}
+
+.catalog h2{
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.product img {
+    width: 100%;
+    max-width: 350px; /* Make the image fill the container */
+    min-height: 60px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .product {
+        display: block; /* Stack products vertically on smaller screens */
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    }
+}
+
+.product-name{
+    margin-bottom: 10px;
+}
+
+.product-price{
+    margin-top: 10px;
+}
+
+.product button {
+    margin-top: 10px;
+    background-color: #4f44e6; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    font-size: 16px; /* Розмір шрифту кнопки */
+    border: none; /* Видалити границю кнопки */
+    cursor: pointer; /* Змінити вигляд курсору при наведенні на кнопку */
+    border-radius: 30px;
+}
+
+/* Стилі для кнопки при наведенні */
+.product button:hover {
+    background-color: #ce774f; /* Змінити колір фону при наведенні */
+}
+
+/* Стилі для кнопки при натисканні */
+.product button:active {
+    background-color: #471ab1; /* Змінити колір фону при натисканні */
+}
+
+.cart button {
+    margin-top: 10px;
+    background-color: #4f44e6; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    font-size: 16px; /* Розмір шрифту кнопки */
+    border: none; /* Видалити границю кнопки */
+    cursor: pointer; /* Змінити вигляд курсору при наведенні на кнопку */
+    border-radius: 30px;
+}
+
+/* Стилі для кнопки при наведенні */
+.cart button:hover {
+    background-color: #ce774f; /* Змінити колір фону при наведенні */
+}
+
+/* Стилі для кнопки при натисканні */
+.cart button:active {
+    background-color: #471ab1; /* Змінити колір фону при натисканні */
+}
+
+#checkoutForm button {
+    margin-top: 10px;
+    background-color: #4f44e6; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    font-size: 16px; /* Розмір шрифту кнопки */
+    border: none; /* Видалити границю кнопки */
+    cursor: pointer; /* Змінити вигляд курсору при наведенні на кнопку */
+    border-radius: 30px;
+}
+
+/* Стилі для кнопки при наведенні */
+#checkoutForm button:hover {
+    background-color: #ce774f; /* Змінити колір фону при наведенні */
+}
+
+/* Стилі для кнопки при натисканні */
+#checkoutForm button:active {
+    background-color: #471ab1; /* Змінити колір фону при натисканні */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Розташування елементів в стовпчик */
+    align-items: center; /* Центрування елементів по горизонталі */
+    margin: 20px;
+    margin-top: 100px;
+    text-align: center;
+    color: #f8ecff;
+}
+
+.cart, #orderForm {
+    width: 45%;
+    border: 1px solid #4d3232;
+    padding: 10px;
+    background-color: #ac65fd;
+    margin-bottom: 20px; /* Додайте відступ між кошиком і формою */
+}
+
+#checkoutForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#product-image {
+    max-width: 50%;
+    height: auto;
+}
+
+#product-info {
+    margin-left: 20px;
+    max-width: 50%;
+}
+
+#product-info h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center; /* Вирівняти текст по центру */
+}
+
+#product-name{
+    font-size: 38px;
+}
+
+#add-to-cart-button {
+    margin-top: 20px;
+    font-size: 18px;
+    display: block;
+    margin-left: auto; /* Зробити кнопку блоком і вирівняти по центру */
+    margin-right: auto;
+}
+
+.product-description {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center; /* Вирівняти текст опису по центру */
+}
+
+#product-info h2,
+#product-info p,
+#product-info label,
+#product-info input,
+#product-info select,
+#product-info button {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center; /* Вирівняти текст по центру */
+}
+
+#product-info input,
+#product-info select {
+    width: 100%; /* Розтягнути інпути та селекти на всю ширину */
+}
+#product-info button {
+    margin-top: 10px;
+    background-color: #4f44e6; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    font-size: 16px; /* Розмір шрифту кнопки */
+    border: none; /* Видалити границю кнопки */
+    cursor: pointer; /* Змінити вигляд курсору при наведенні на кнопку */
+    border-radius: 30px;
+}
+
+/* Стилі для кнопки при наведенні */
+#product-info button:hover {
+    background-color: #ce774f; /* Змінити колір фону при наведенні */
+}
+
+/* Стилі для кнопки при натисканні */
+#product-info button:active {
+    background-color: #471ab1; /* Змінити колір фону при натисканні */
+}

@@ -1,0 +1,119 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/xlsx-populate@3.11.0/dist/xlsx-populate.min.js"></script>
+
+    <title>Корзина</title>
+</head>
+<body>
+    <header>
+
+        <nav id="navbar">
+            <a href="main.html" class="brand">VYMCS</a>
+            <ul>
+                <li>
+                    <a href="catalog.html">Каталог</a>
+                </li>
+                <li>
+                    <a href="about_us.html">Про нас</a>
+                    <ul class="dropdown">
+                        <li><a href="contacts.html">Контактна інформація</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Q/A</a>
+                    <ul class="dropdown">
+                        <li><a href="exchange_and_return.html">Повернення, обмін, гарантія</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="table_sizes.html">Таблиця розмірів</a></li>
+                        <li><a href="site_map.html">Мапа сайту</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cart.html">Кошик</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="cart">
+            <h2>Кошик</h2>
+            <p id="added-item-message"></p>
+            <ul id="cart-items"></ul>
+            <p>Загалом: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-button" onclick="showOrderForm()">Оформити замовлення</button>
+        </div>
+
+        <div id="orderForm" style="display: none;">
+            <h2>Форма замовлення</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="lastname">Прізвище:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="tel">Номер телефону:</label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Пошта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="button-container">
+                    <button onclick="resetForm()">Очистити форму</button>
+                    <button type="submit">Купити</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <script src="cart.js"></script>
+
+    <section class="footer" style="position: fixed;">
+        <div class="footer-content">
+            <div class="footer-image">
+                <a href="#" alt="main_page"><img src="logo.png"></a>
+            </div>
+            <p>© 2023 "A Variety of Your Modish and Convenient Shoes". Всі права захищені. "Різноманітність вашого модного та зручного взуття."</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/dima.nazar.338/?locale=uk_UA"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/dimon01qr"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/okofkaa/"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/channel/UCe30_fKZhPNA-xNGy8JJDOA"><i class='bx bxl-youtube' ></i></a>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <a href="catalog.html"><h4>Каталог</h4></a>
+        </div>
+        <div class="footer-content">
+            <a href=""><h4>Про нас</h4></a>
+            <li><a href="#">Контактна інформація</a></li>
+        </div>
+        <div class="footer-content">
+            <h4>Q/A</h4>
+            <li><a href="exchange_and_return.html">Повернення, обмін, гарантія</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="">Таблиця розмірів</a></li>
+            <li><a href="">Мапа сайту</a></li>
+        </div>
+        <div class="footer-content">
+            <a href="cart.html"><h4>Кошик</h4></a>
+        </div>
+    </section>
+</body>
+</html>

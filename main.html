@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Scroll Aware Navbar</title>
+    <link rel="stylesheet" type="text/css" href="main_style.css">
+    <link rel="stylesheet" type="text/javascript" href="main_js.js">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav id="navbar">
+            <a href="main.html" class="brand">VYMCS</a>
+            <ul>
+                <li>
+                    <a href="catalog.html">Каталог</a>
+                </li>
+                <li>
+                    <a href="about_us.html">Про нас</a>
+                    <ul class="dropdown">
+                        <li><a href="contacts.html">Контактна інформація</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Q/A</a>
+                    <ul class="dropdown">
+                        <li><a href="exchange_and_return.html">Повернення, обмін, гарантія</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="table_sizes.html">Таблиця розмірів</a></li>
+                        <li><a href="site_map.html">Мапа сайту</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cart.html">Кошик</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+        <h1 class="h1-content">ВАС вітає VYMCS</h1>
+
+
+
+    <script type="text/javascript">
+        var lastScrollTop = 0;
+    navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            navbar.style.top = "-80px";
+        } else {
+            navbar.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    })
+    </script>
+
+    <section class="footer">
+        <div class="footer-content">
+            <div class="footer-image">
+                <a href="#" alt="main_page"><img src="logo.png"></a>
+            </div>
+            <p>© 2023 "A Variety of Your Modish and Convenient Shoes". Всі права захищені. "Різноманітність вашого модного та зручного взуття."</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/dima.nazar.338/?locale=uk_UA"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/dimon01qr"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/okofkaa/"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/channel/UCe30_fKZhPNA-xNGy8JJDOA"><i class='bx bxl-youtube' ></i></a>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <a href="catalog.html"><h4>Каталог</h4></a>
+        </div>
+        <div class="footer-content">
+            <a href=""><h4>Про нас</h4></a>
+            <li><a href="#">Контактна інформація</a></li>
+        </div>
+        <div class="footer-content">
+            <h4>Q/A</h4>
+            <li><a href="exchange_and_return.html">Повернення, обмін, гарантія</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="">Таблиця розмірів</a></li>
+            <li><a href="">Мапа сайту</a></li>
+        </div>
+        <div class="footer-content">
+            <a href="cart.html"><h4>Кошик</h4></a>
+        </div>
+    </section>
+</body>
+
+</html>

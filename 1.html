@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин взуття</title>
+    <style>
+        /* Стилі для каталогу товарів */
+        .product {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Стилі для детальної інформації */
+        #detail-container {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="horizontal-menu">
+        <a href="cart.html">Кошик</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="1.html">Опопоп</a>
+    </div>
+
+<!-- Каталог товарів -->
+<div id="catalog">
+    <div class="product" onclick="showDetails('Товар 1', 'Опис товару 1', 'Ціна: $50')">Товар 1</div>
+    <div class="product" onclick="showDetails('Товар 2', 'Опис товару 2', 'Ціна: $70')">Товар 2</div>
+    <div class="product" onclick="showDetails('Товар 3', 'Опис товару 3', 'Ціна: $90')">Товар 3</div>
+</div>
+
+<!-- Детальна інформація про товар -->
+<div id="detail-container">
+    <h2 id="detail-title"></h2>
+    <p id="detail-description"></p>
+    <p id="detail-price"></p>
+</div>
+
+<script>
+    // Функція для відображення детальної інформації про товар
+    function showDetails(title, description, price) {
+        // Отримання елементів для відображення деталей
+        var titleElement = document.getElementById('detail-title');
+        var descriptionElement = document.getElementById('detail-description');
+        var priceElement = document.getElementById('detail-price');
+
+        // Встановлення значень елементів
+        titleElement.textContent = title;
+        descriptionElement.textContent = description;
+        priceElement.textContent = price;
+
+        // Показ деталей
+        document.getElementById('detail-container').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
